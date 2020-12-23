@@ -1,0 +1,15 @@
+.bvk{
+    background: -webkit-linear-gradient(bottom left, #ff795f, #ce1768);
+   
+}
+.bvk h1{
+    text-align: center;
+    color:#fff;
+    padding-top: 15px;
+}
+.card{
+    margin-bottom: 20px;
+}
+.card-body p{
+    font-size: 15px;
+}

@@ -1,0 +1,22 @@
+.iow h1{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.card{
+    background: -webkit-linear-gradient(bottom left, #ce1768, #ff795f);
+    color:#fff;
+    margin-bottom: 10px;
+}
+.card-body{
+    background:#fff;
+    color:#000;
+}
+.card-body button{
+    background: -webkit-linear-gradient(bottom left, #ff795f, #ce1768);
+    color:#fff;
+    text-transform: uppercase;
+    border:none;
+    border-radius: 35px;
+    padding :10px 20px;
+}

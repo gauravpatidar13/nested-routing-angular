@@ -1,0 +1,7 @@
+<div class="likes-sec">
+    <div class="hr-wr">
+    <img src="/assets/images/heart-outline.png" *ngIf="!bool" (click)="likePost()">
+    <img src="/assets/images/heart-filled.png" *ngIf="bool" (click)="unlikePost()">
+</div>
+    <p>{{totalLikes}} Likes</p>
+</div>

@@ -1,0 +1,11 @@
+.imr-w img{
+    width: 50px;
+    height: 50px;
+}
+p{
+    font-size: 14px;
+}
+.uyiu{
+    display: flex;
+    flex-direction: row;
+}

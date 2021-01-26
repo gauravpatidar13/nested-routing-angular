@@ -1,33 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ShowcaseComponent } from './showcase/showcase.component';
-import { ComplexComponent } from './complex/complex.component';
-import { FeaturesComponent } from './features/features.component';
-import { PricingComponent } from './pricing/pricing.component';
-import { SayComponent } from './say/say.component';
-import { WatchComponent } from './watch/watch.component';
-import { NewsletterComponent } from './newsletter/newsletter.component';
-import {OwlModule} from 'ngx-owl-carousel';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {FormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ShowcaseComponent,
-    ComplexComponent,
-    FeaturesComponent,
-    PricingComponent,
-    SayComponent,
-    WatchComponent,
-    NewsletterComponent
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OwlModule
+    AngularFireModule.initializeApp(environment.firebaseConfig,"insta"),
+    AngularFirestoreModule, // Only required for database features
+    AngularFireAuthModule, // Only required for auth features,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

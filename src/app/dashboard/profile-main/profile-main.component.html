@@ -1,0 +1,21 @@
+<div>
+    <div style="display: flex;flex-direction: row;">
+  
+<img src="{{currentUserLoggedIn.avatar}}">
+<div>
+    <h6>{{currentUserLoggedIn.fullname}}</h6>
+    <h6>{{currentUserLoggedIn.email}}</h6>
+    <h6>{{currentUserLoggedIn.phone}}</h6>
+</div>
+      
+</div>
+<input type="file"
+ id="file"
+ #userPhoto
+ (change)="onFileSelected($event)"
+ name="image"
+ autocomplete="off"
+ style="margin-top: 20px;"
+ />
+<button (click)="uploadAvatar()">update avatar</button>
+</div>

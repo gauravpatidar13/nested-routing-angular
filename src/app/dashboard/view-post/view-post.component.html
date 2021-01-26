@@ -1,0 +1,48 @@
+<div class="post-view">
+    <div class="im-wr">
+        <img src="{{post.data.post_url}}" id="main-img">
+    </div>
+
+    <div class="content-post">
+        <div class="co">
+            <div class="im-wr">
+                <img src="{{postAuthor.avatar}}">
+            </div>
+            <div class="xo">
+                <h4 routerLink="../view-profile" (click)=openUserProfile()>{{postAuthor.fullname}}</h4>
+                <p>{{postAuthor.email}}</p>
+            </div>
+        </div>
+        <!-- <div class="likes-sec">
+            <div class="hr-wr">
+            <img src="/assets/images/heart.PNG">
+        </div>
+            <p>0 Likes</p>
+        </div> -->
+    </div>
+    <div class="has-h">
+        <p>{{post.post_text}}</p>
+        <p class="hash-tags">{{post.time_stamp | date:'MMM. dd, yyyy hh:mm a'}}</p>
+    </div>
+   
+    <div *ngFor="let comment of comments" class="comments-sec-view">
+        
+
+        <!--
+            create new component pass comment.by and fetch avatar fullname email
+        -->
+        
+        <div class="cmo-des">
+            <app-comment-view [commentUserId]="comment.by"></app-comment-view>
+<p>{{comment.comment}}</p>
+<p>{{comment.timestamp | date:'MMM. dd, yyyy hh:mm a'}}</p>
+        </div>   
+    </div>
+    <div class="comments-sec">
+        <div class="imr-w">
+        <img src="{{author.avatar}}">
+    </div>
+<input type="text" placeholder="write comments here..." #comment>
+<button (click)="postComments(comment.value)">post</button>
+    </div>
+</div>

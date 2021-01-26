@@ -1,0 +1,11 @@
+<div *ngFor="let post of posts" class="post" (click)="selectPost(post)">
+    <img src="{{post.data.post_url}}" id="main-img" routerLink="../view-post" (click)=openPostDetail(post)>
+    <div class="content-post">
+    <app-nested-author-view [authorId]="post.data.author"></app-nested-author-view>
+    <app-nested-likes-view [currentPostId]="post.id" [postAuthorId]="post.data.author"></app-nested-likes-view>
+    </div>
+    <div class="has-h">
+    <p>{{post.post_text}}</p>
+    <p class="hash-tags">{{post.data.time_stamp | date:'MMM. dd, yyyy hh:mm a'}}</p>
+</div>
+</div>

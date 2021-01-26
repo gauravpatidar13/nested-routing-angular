@@ -1,0 +1,42 @@
+<div class="profile">
+    <div class="profile-logo-wr">
+        <img src="{{postAuthor.avatar}}">
+    </div>
+    <div class="content">
+    <h1 class="content-name">{{postAuthor.fullname}}</h1>
+    <h6>{{postAuthor.email}}</h6>
+    <button class="pink" #tog (click)=toggleFun(tog)>Unfollow</button>
+    <div class="tabs-m">
+        <div class="pw">
+            <p>Posts</p>
+            <h3>{{posts_images.length}}</h3>
+        </div>
+        <div class="pw">
+            <p>Following</p>
+            <h3>0</h3>
+        </div>
+        <div class="pw">
+            <p>Followers</p>
+            <h3>3</h3>
+        </div>
+    </div>
+</div>
+</div>
+<div class="tabs-tw">
+    <div class="tab-itm active">
+        <img src="/assets/images/dash-icon.PNG">
+        <p>Posts</p>
+    </div>
+    <div class="tab-itm">
+        <img src="/assets/images/saved.PNG">
+        <p>Saved</p>
+    </div>
+</div>
+<div class="tabs-tw-content-1">
+    <div class="grd">
+        <div *ngFor="let postImage of posts_images">
+        <img src="{{postImage}}">
+    </div>
+    
+    </div>
+</div>

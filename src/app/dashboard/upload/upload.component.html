@@ -1,0 +1,9 @@
+<div class="wr">
+    <file-pond #myPond style="width:50%;margin:auto"
+       [options]="pondOptions"
+       (onaddfile)="pondHandleAddFile($event)">
+   </file-pond>
+   <input type="text" placeholder="write someting about post" #des>
+   <small *ngIf="hasError" class="err">please select image and write something about post</small>
+    <button (click)="postData(des.value)">Post</button>
+   </div>

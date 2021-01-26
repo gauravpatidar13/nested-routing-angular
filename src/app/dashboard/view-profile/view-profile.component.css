@@ -1,0 +1,89 @@
+.profile{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.content{
+    margin-left: 15px;
+}
+.content .content-name{
+    font-weight: bold;
+    font-size: 32px;
+}
+.content .pink{
+    background:rgb(245, 33, 100);
+    color:#fff;
+    border:none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding:10px 20px;
+}
+.tabs-m{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1000px;
+}
+.tabs-m p{
+    font-size: 14px;
+}
+.tabs-m .pw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pw h3{
+    font-size: 1.40rem;
+}
+.tab-itm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 80px;
+}
+.tab-itm.active{
+    color:rgb(42, 115, 228);
+    border-bottom: 1px solid #000;
+}
+.tab-itm p{
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+.tabs-tw{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.grd{
+    width: 1200px;
+    height: 250px;
+    border:1px solid #000;
+    margin:auto;
+    display: flex;
+flex-direction: row;
+justify-content: flex-start;
+flex-wrap: wrap;
+align-items: center;
+}
+.grd div{
+margin:20px
+}
+.grd div img{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+}
+.tabs-tw-content-1{
+    margin-top: 18px;
+}
+
+.profile-logo-wr img{
+    width: 400px;
+}

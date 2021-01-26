@@ -1,0 +1,32 @@
+<div class="inbox">
+    <div class="msg-chat-users">
+        <h1>Messages</h1>
+        <div class="msg-chat-itm" *ngFor="let user of msgUsers" (click)="selectUser(user)" [class.active]="chatWindowActive&&user.id==currentChatUser.id">
+            <div class="chat-cion">
+                <img src="{{user.data.avatar}}">
+            </div>
+            <p><b>{{user.data.fullname}}</b><br>{{user.data.email}}</p>
+        </div>
+    </div>
+    <div class="msg-chats" *ngIf="chatWindowActive">
+        <div *ngFor="let msg of msgs">
+            <div [ngSwitch]="msg.pos">
+            <div *ngSwitchCase="'left'" class="lefty">
+            <p ><b>{{currentChatUser.data.fullname}} </b><br>{{currentChatUser.data.email}}:<b>{{msg.timestamp | date:'MMM. dd, yyyy hh:mm a'}}</b></p>
+            <span>{{msg.msg}}</span>
+        </div>
+        <div *ngSwitchCase="'right'" class="righty">
+            <p><b>{{msg.timestamp | date:'MMM. dd, yyyy hh:mm a'}}</b></p>
+            <span>{{msg.msg}}</span>
+        </div>
+    </div>
+        </div>    
+    </div>
+    <div *ngIf="!chatWindowActive">
+Select people to chat
+    </div>
+</div>
+<div class="sen-msg" *ngIf="chatWindowActive">
+<input type="text" placeholder="write your message here..." #msgg>
+<button (click)="sendMsgs(msgg.value)">send</button>
+</div>
